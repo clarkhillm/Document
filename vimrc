@@ -28,14 +28,22 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+set magic
+
 winpos 0 0
-colorscheme Molokai
+
+colorscheme molokai
+
 syntax on
+
 set autoindent
 set smartindent
+
 set ruler
+
 set guifont=Source_Code_Pro:h9:cDEFAULT
-set lines=90 columns=110
+set lines=100 columns=100
+
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
@@ -43,14 +51,16 @@ if has("win32")
 else
     set fileencoding=utf-8
 endif
-"解决菜单乱码
+"解决菜单乱码:
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 "解决consle输出乱码
 language messages zh_CN.utf-8
 
 set foldenable      " 允许折叠  
-set foldmethod=manual   " 手动折叠  
+set ignorecase
+set foldmethod=indent
+set foldlevel=30
 
 set expandtab     " 使用空格代替tab.
 set smarttab
@@ -58,5 +68,14 @@ set tabstop=4     " 空格数量是4。
 set shiftwidth=4  " 自动缩进的宽度。
 
 set list
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:_
+set tags=tags;
+set autochdir
+set linespace=4
+set cuc cul
+set number
+set listchars=tab:>.,trail:~,extends:>,precedes:<,nbsp:_
 
+setlocal spell spelllang=en_us
+
+nnoremap <A-a> <C-a>
+nnoremap <A-x> <C-x>
