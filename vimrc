@@ -32,7 +32,7 @@ set magic
 
 winpos 0 0
 
-colorscheme Monokai-chris
+colorscheme molokai
 
 syntax on
 
