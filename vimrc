@@ -38,8 +38,7 @@ syntax on
 
 set autoindent
 set smartindent
-
-set guifont=Source_Code_Pro:h9:cDEFAULT
+set guifont=YaHei_Consolas_Hybrid:h10:cDEFAULT
 set lines=100 columns=100
 
 set encoding=utf-8
@@ -73,9 +72,9 @@ set cuc cul
 set number
 set listchars=tab:>.,trail:~,extends:>,precedes:<,nbsp:_
 
-setlocal spell spelllang=en_us
-
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
 
 set fdo-=search
+
+filetype on
