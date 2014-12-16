@@ -32,14 +32,12 @@ set magic
 
 winpos 0 0
 
-colorscheme molokai
+colorscheme Monokai-chris
 
 syntax on
 
 set autoindent
 set smartindent
-
-set ruler
 
 set guifont=Source_Code_Pro:h9:cDEFAULT
 set lines=100 columns=100
@@ -79,3 +77,5 @@ setlocal spell spelllang=en_us
 
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
+
+set fdo-=search
