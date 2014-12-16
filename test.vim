@@ -36,5 +36,6 @@ function CheckFiletype()
     if &filetype == "javascript" || &filetype == "python"
         set guifont=Source_Code_Pro:h9:cDEFAULT
         setlocal spell spelllang=en_us
+        colo monokain
     endif
 endfunction
