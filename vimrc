@@ -78,3 +78,6 @@ nnoremap <A-x> <C-x>
 set fdo-=search
 
 filetype on
+
+set guioptions-=T " 隐藏工具栏
+set guioptions-=m " 隐藏菜单栏
