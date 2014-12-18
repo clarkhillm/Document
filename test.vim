@@ -35,12 +35,3 @@ nnoremap  <leader>b :call JumpInBraces("f")<CR>
 nnoremap  <leader>f :call JumpInBraces("b")<CR>
 nnoremap  <leader>q :call Jump_floder()<CR>
 
-au FileType * call CheckFiletype()
-
-function CheckFiletype()
-    if &filetype == "javascript" || &filetype == "python"
-        set guifont=Source_Code_Pro:h10:cDEFAULT
-        setlocal spell spelllang=en_us
-        colo monokain
-    endif
-endfunction
