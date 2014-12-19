@@ -44,8 +44,8 @@ set fileencoding=utf-8
 "解决consle输出乱码
 language messages zh_CN.utf-8
 
-set guifont=Source_code_pro:h10:cDEFAULT
-set gfw=SimSun-ExtB:h12
+set guifont=Source_code_pro_Medium:h10:cDEFAULT
+set gfw=NSimSun:h10
 
 set ignorecase
 
