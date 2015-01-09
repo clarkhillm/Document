@@ -28,43 +28,50 @@ function MyDiff()
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+execute pathogen#infect()
+
 set magic
 
 winpos 0 0
+colo molokai
 colo monokain
 syntax on
 
 set autoindent
-set smartindent
-1
+
 set lines=100 columns=100
-setlocal spell spelllang=en_us
+set spell spelllang=en_us
 set encoding=utf-8
 set fileencoding=utf-8
 "解决consle输出乱码
 language messages zh_CN.utf-8
 
+"解决菜单乱码  
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
 set guifont=Source_code_pro_Medium:h10:cDEFAULT
 set gfw=NSimSun:h10
 
-set ignorecase
+"set ignorecase
 
 set foldenable      " 允许折叠  
 set foldmethod=indent
 set foldlevel=30
 set foldcolumn=0
+
 set expandtab     " 使用空格代替tab.
 set smarttab
 set tabstop=4     " 空格数量是4。 
 set shiftwidth=4  " 自动缩进的宽度。
 
-set list
 set tags=tags
-set autochdir
 set linespace=4
 set cuc cul
+set ve=all
 set number
 set listchars=tab:>.,trail:~,extends:>,precedes:<,nbsp:_
+set list
 
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
@@ -73,4 +80,11 @@ set fdo-=search
 
 set guioptions-=T " 隐藏工具栏
 set guioptions-=m " 隐藏菜单栏
+set go-=L
+set go-=r
 
+set ts=4 sw=4 et
+
+let mapleader=","
+nmap <Leader>i :IndentGuidesToggle<CR>
+nmap <Leader>t :Tagbar<CR>
