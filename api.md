@@ -1005,22 +1005,18 @@ com.sky.sdk.manager这个包下面有一个类：AccountBinding。这个类负�
    java.lang.String   [getInstanceId](file:///C:\Users\gavin\Desktop\com\sky\sdk\model\BindingInfo.Account.html#getInstanceId())()       获取应用实例的id
    java.lang.String   [getInstanceName](file:///C:\Users\gavin\Desktop\com\sky\sdk\model\BindingInfo.Account.html#getInstanceName())()     获取应用的名称
 
-<span id="_Toc27670" class="anchor"><span id="_Toc26168" class="anchor"><span id="_Toc410996479" class="anchor"></span></span></span>开发示例 {#开发示例 .a8}
+开发示例 {#开发示例 .a8}
 =============================================================================================================================================
 
-<span id="_Toc20304" class="anchor"><span id="_Toc13501" class="anchor"><span id="_Toc410996480" class="anchor"></span></span></span>说明 {#说明-1 .a}
+说明 {#说明-1 .a}
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-<span id="_Toc313561787" class="anchor"><span id="_Toc324380542"
-class="anchor"><span id="_Toc13352"
-class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类为例，来演示一个第三方应用的开发流程，其中不包含第三方的具体业务。第三方在开发的过程中，根据业务逻辑的需要来组织SDK的调用流程，并编写相应的业务代码
+本节以一个名为Sample简单的JAVA类为例，来演示一个第三方应用的开发流程，其中不包含第三方的具体业务。第三方在开发的过程中，根据业务逻辑的需要来组织SDK的调用流程，并编写相应的业务代码
 
-<span id="_Toc25919" class="anchor"><span id="_Toc7718" class="anchor"><span id="_Toc410996481" class="anchor"></span></span></span>调用例子 {#调用例子 .a}
---------------------------------------------------------------------------------------------------------------------------------------------
+##调用例子 {#调用例子 .a}
 
 ### 登录及成员查询、数据同步，短信发送接口示例 {#登录及成员查询数据同步短信发送接口示例 .a9}
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```Java
   **import** java.util.Date;
 
@@ -1250,11 +1246,11 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   \*/
 
-  **private** InputStream generateFile()
+  private InputStream generateFile()
 
   {
 
-  StringBuffer sb = **new** StringBuffer();
+  StringBuffer sb = new StringBuffer();
 
   sb.append("\<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?\>");
 
@@ -1264,7 +1260,7 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   //生成1000条需要校验的数据
 
-  **for**(**int** i =0;i\<1000;i++)
+  for(int i =0;i\<1000;i++)
 
   {
 
@@ -1290,15 +1286,15 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   String filePath = "d:/td\_s\_user.xml";
 
-  InputStream in = **null**;
+  InputStream in = null;
 
-  **try**
+  try
 
   {
 
   //将数据写入文件，因一次性数据较多，直接转换会失败，所以先写入文件，再转换为数据流
 
-  FileOutputStream out = **new** FileOutputStream(filePath);
+  FileOutputStream out = new FileOutputStream(filePath);
 
   out.write(sb.toString().getBytes());
 
@@ -1306,13 +1302,13 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   //从文件中读取出数据流
 
-  File f = **new** File("d:/td\_s\_user.xml");
+  File f = new File("d:/td\_s\_user.xml");
 
-  in = **new** FileInputStream(f);
+  in = new FileInputStream(f);
 
   }
 
-  **catch** (FileNotFoundException e)
+  catch (FileNotFoundException e)
 
   {
 
@@ -1320,7 +1316,7 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   }
 
-  **catch** (IOException e)
+  catch (IOException e)
 
   {
 
@@ -1328,17 +1324,16 @@ class="anchor"></span></span></span>本节以一个名为Sample简单的JAVA类�
 
   }
 
-  **return** in;
+  return in;
 
   }
 
   }
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
 
-### LBS定位ICT接口示例 {#lbs定位ict接口示例 .a9}
+### LBS定位ICT接口示例
 
-  ----------------------------------------------------------------------------------------------
+```Java
   LoginResponse response = (LoginResponse) request.getSession().getAttribute("loginResponse");
 
   // 获取LBS接口实现对象
