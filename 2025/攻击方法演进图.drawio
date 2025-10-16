@@ -1,0 +1,181 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.7">
+  <diagram name="第 1 页" id="LaWED9Rk0BtdA1YwzJt0">
+    <mxGraphModel dx="1888" dy="840" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-9" value="开始研究CVE-2025-41236" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="242.5" y="100" width="239" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-10" value="第一阶段-用户态尝试" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257" y="190" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-11" value="方案1-ethtool命令" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="278" width="190" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-12" value="方案2-ioctl系统调用" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="278" width="202" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-13" value="方案3-MMIO直接访问" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="513" y="278" width="208" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-14" value="失败" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="69" y="405" width="92" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-15" value="失败" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="316" y="405" width="92" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-16" value="失败" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="571" y="405" width="92" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-17" value="第二阶段-堆风水方法" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="257" y="480" width="210" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-18" target="jiC4GM_4Q_KSB2TzHKgm-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-18" value="步骤1-堆喷射500对象" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="52" y="558" width="98" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-19" target="jiC4GM_4Q_KSB2TzHKgm-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-19" value="步骤2-创建166个空洞" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="170" y="558" width="83" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-20" value="步骤3-触发整数溢出" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="558" width="86" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-21" value="步骤4-期望命中ROP对象" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="394" y="558" width="76" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-22" value="成功率仅35%" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="600" y="558" width="100" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-23" value="第三阶段-精确攻击" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="52" y="650" width="116" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-24" value="步骤1-静态分析vmxnet3.s&#xa;43239行汇编代码" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="210" y="652" width="163" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-25" value="步骤2-定位精确偏移&#xa;0x1048 ethtool_ops" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="422" y="649" width="132" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-26" value="步骤3-开发内核模块&#xa;直接调用驱动函数" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="649" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-27" value="步骤4-函数指针劫持&#xa;ROP链执行" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="51" y="740" width="119" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-28" value="步骤5-智能恢复机制&#xa;Level 2临时劫持" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="242.5" y="735" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-29" value="最终成功方案" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="830" width="164" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-31" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-9" target="jiC4GM_4Q_KSB2TzHKgm-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-32" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.91;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-10" target="jiC4GM_4Q_KSB2TzHKgm-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="253" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-33" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-10" target="jiC4GM_4Q_KSB2TzHKgm-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-34" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.9;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-10" target="jiC4GM_4Q_KSB2TzHKgm-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="617" y="253" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-35" value="内核参数拦截" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-11" target="jiC4GM_4Q_KSB2TzHKgm-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-36" value="边界检查拒绝" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.49;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-12" target="jiC4GM_4Q_KSB2TzHKgm-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-37" value="复杂性过高" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-13" target="jiC4GM_4Q_KSB2TzHKgm-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-38" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.09;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-14" target="jiC4GM_4Q_KSB2TzHKgm-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="484" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-39" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.49;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-15" target="jiC4GM_4Q_KSB2TzHKgm-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-40" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.1;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-16" target="jiC4GM_4Q_KSB2TzHKgm-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="617" y="484" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-41" value="" style="startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;strokeColor=default;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-17" target="jiC4GM_4Q_KSB2TzHKgm-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-44" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-20" target="jiC4GM_4Q_KSB2TzHKgm-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-45" value="内存布局随机化" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-21" target="jiC4GM_4Q_KSB2TzHKgm-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-46" value="不可接受" style="startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-22" target="jiC4GM_4Q_KSB2TzHKgm-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-47" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-23" target="jiC4GM_4Q_KSB2TzHKgm-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-48" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-24" target="jiC4GM_4Q_KSB2TzHKgm-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-49" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-25" target="jiC4GM_4Q_KSB2TzHKgm-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-50" value="" style="startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-26" target="jiC4GM_4Q_KSB2TzHKgm-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-51" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-27" target="jiC4GM_4Q_KSB2TzHKgm-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiC4GM_4Q_KSB2TzHKgm-52" value="成功率90%+" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiC4GM_4Q_KSB2TzHKgm-28" target="jiC4GM_4Q_KSB2TzHKgm-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
